@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Joshua Prieto Zambrano - Ingeniero de Sistemas y Desarrollador Full Stack">
+    <title>Joshua Prieto | Ingeniero de Sistemas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Estilos Base */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    :root {
+        --primary: #4F46E5;
+        --secondary: #818CF8;
+        --dark: #1F2937;
+        --darker: #111827;
+        --light: #F3F4F6;
+        --accent: #10B981;
+    }
+
+    body {
+        background: var(--darker);
+        color: var(--light);
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(135deg, var(--primary), var(--dark));
+        color: white;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        margin-bottom: -3rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: -10%;
+        width: 120%;
+        height: 100px;
+        background: var(--darker);
+        transform: rotate(3deg);
+    }
+
+    .hero img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid var(--light);
+        margin-bottom: 1.5rem;
+        object-fit: cover;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-links {
+        margin: 1.5rem 0;
+    }
+
+    .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 0.8rem;
+        transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-3px);
+        text-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Botones mejorados */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8rem 1.8rem;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        margin: 0.5rem;
+        transition: all 0.3s;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        font-weight: 500;
+        backdrop-filter: blur(4px);
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+    }
+
+    .btn i {
+        margin-right: 0.5rem;
+    }
+
+    /* Secciones Generales */
+    section {
+        padding: 2.5rem 0;
+        margin: 2rem 0;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: var(--light);
+        margin-bottom: 2.5rem;
+        text-align: center;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        width: 60px;
+        height: 3px;
+        background: var(--accent);
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Tarjetas */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .card {
+        background: rgba(31, 41, 55, 0.7);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s;
+        backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Timeline Experiencia */
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background: var(--primary);
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(31, 41, 55, 0.7);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s;
+    }
+
+    .timeline-item:hover {
+        transform: translateX(10px);
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -35px;
+        top: 1.5rem;
+        width: 15px;
+        height: 15px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 12px var(--accent);
+    }
+
+    /* Sección Personal */
+    .personal-section {
+        background: rgba(31, 41, 55, 0.7);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 2rem 0;
+    }
+
+    .hobbies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .hobby-card {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(16, 24, 39, 0.8);
+        border-radius: 10px;
+        transition: all 0.3s;
+    }
+
+    .hobby-card:hover {
+        transform: translateY(-8px) rotate(2deg);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+    }
+
+    /* Spotify Player */
+    .spotify-container {
+        margin: 2rem auto;
+        max-width: 600px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Contacto Mejorado */
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        display: grid;
+        gap: 1.5rem;
+        padding: 2rem;
+        background: rgba(31, 41, 55, 0.9);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-info::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            45deg,
+            transparent 25%,
+            rgba(79, 70, 229, 0.1) 25%,
+            rgba(79, 70, 229, 0.1) 50%,
+            transparent 50%,
+            transparent 75%,
+            rgba(79, 70, 229, 0.1) 75%
+        );
+        background-size: 4px 4px;
+        animation: animateBg 4s linear infinite;
+        z-index: -1;
+    }
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: rgba(16, 24, 39, 0.8);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+        background: rgba(16, 24, 39, 0.95);
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .contact-details h3 {
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .contact-link {
+        color: var(--light);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s;
+    }
+
+    .contact-link:hover {
+        color: var(--secondary);
+    }
+
+    .contact-link i {
+        font-size: 0.8rem;
+        opacity: 0.7;
+    }
+
+    .contact-form {
+        background: rgba(31, 41, 55, 0.7);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .contact-form:hover {
+        transform: translateY(-5px);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 0.8rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        color: var(--light);
+        transition: all 0.3s;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        background: linear-gradient(135deg, var(--accent), #059669);
+        padding: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: transform 0.3s;
+    }
+
+    button[type="submit"]:hover {
+        transform: scale(1.02);
+    }
+
+    /* Selector de Idioma */
+    .language-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .lang-btn {
+        background: rgba(31, 41, 55, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--light);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .lang-btn:hover {
+        background: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    /* Proyectos */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .project-card {
+        background: rgba(31, 41, 55, 0.7);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+    }
+
+    /* Animaciones */
+    @keyframes animateBg {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(2px, 2px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            padding: 1rem;
+        }
+        
+        .contact-container {
+            grid-template-columns: 1fr;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        .hero {
+            padding: 3rem 0;
+        }
+        
+        .project-card img {
+            height: 180px;
+        }
+        
+        .contact-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <!-- Selector de Idioma -->
+    <div class="language-switcher">
+        <button class="lang-btn" id="btn-es">ES</button>
+        <button class="lang-btn" id="btn-en">EN</button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <img src="profile.jpg" alt="Joshua Prieto">
+            <h1>Joshua Prieto Zambrano</h1>
+            <p>Ingeniero de Sistemas | Especialista en Cloud & Cybersecurity</p>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/joshua-prieto-zambrano-1b68592aa" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/JoshuaPZz" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/jpz.pdf/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:joshuaprieto8@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="downloads">
+                <a href="CV_Joshua_prieto_zambrano_2024 (1).pdf" class="btn" download>
+                    <i class="fas fa-download"></i> CV Académico
+                </a>
+                <a href="Profile.pdf" class="btn" download>
+                    <i class="fas fa-download"></i> CV Profesional
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Sobre Mí Ampliado -->
+        <section id="about">
+            <h2>Sobre Mí</h2>
+            <div class="card">
+                <p>¡Hola! Soy Joshua, un apasionado ingeniero de sistemas con sede en Bogotá, Colombia. Actualmente curso mis estudios en la Pontificia Universidad Javeriana, donde combino mi amor por la tecnología con el desarrollo de habilidades de liderazgo a través de diversos roles académicos y voluntariados.</p>
+                
+                <p>Cuando no estoy programando o resolviendo problemas técnicos, me encontrarás:
+                    <ul>
+                        <li>📚 Leyendo filosofía (¡Soy gran fan de Sartre)</li>
+                        <li>🎧 Escuchando música (Rap)</li>
+                        <li>🏋️‍♂️ Entrenando en el gimnasio</li>
+                        <li>🎮 Jugando videojuegos (Especialmente Souls-like)</li>
+                    </ul>
+                </p>
+
+                <div class="card-grid" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h3>🛠 Tecnologías Principales</h3>
+                        <ul>
+                <li>Java | C++ | Python | JavaScript/TypeScript</li>
+                <li>HTML/CSS | React | Node.js</li>
+                <li>AWS (Lambda, Microservicios)</li>
+                <li>Apache Kafka | Confluent | Pinecone</li>
+                <li>MySQL | MongoDB</li>
+              </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🌟 Habilidades Blandas</h3>
+                        <ul>
+                            <li>Liderazgo estratégico</li>
+                            <li>Resolución creativa de problemas</li>
+                            <li>Comunicación efectiva</li>
+                            <li>Gestión de equipos multidisciplinarios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Experiencia Laboral -->
+      <section id="experience">
+        <h2>Experiencia Profesional</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>WebMaster IEEE Javeriana</h3>
+            <p class="text-secondary">Ene 2025 - Actualidad</p>
+            <ul>
+              <li>Gestión integral del sitio web institucional</li>
+              <li>Implementación de mejoras en UX/UI</li>
+              <li>Integración de herramientas digitales</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Desarrollador Backend - Bucks</h3>
+            <p class="text-secondary">Oct 2024 - Actualidad</p>
+            <ul>
+              <li>Implementación de microservicios en AWS</li>
+              <li>Gestión de bases de datos relacionales</li>
+              <li>Optimización de APIs REST</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Monitor Académico de Comunicaciones y Redes - Javeriana</h3>
+            <p class="text-secondary">Jul 2024 - Ene 2025</p>
+            <ul>
+              <li>Explicación de protocolos de red</li>
+              <li>Apoyo en proyectos de gestión de red y MQTT</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>
+              Monitor Académico de Introducción a la Programación - Javeriana
+            </h3>
+            <p class="text-secondary">Jul 2023 - Ene 2025</p>
+            <ul>
+              <li>Profesor y apoyo en programación en C++</li>
+              <li>Asistencia en asuntos académicos y tutorías</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Educación y Certificaciones -->
+      <section id="education">
+        <h2>Formación Académica</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>🎓 Pontificia Universidad Javeriana</h3>
+            <p>Ingeniería de Sistemas (2023-2026)</p>
+            <ul>
+              <li>Promedio: 4.1/5.0</li>
+              <li>Monitor académico en programación y redes</li>
+              <li>WebMaster del grupo IEEE Javeriana</li>
+              <li>Participación en Misión País Colombia</li>
+              <li>Curso de liderazgo Fabro</li>
+              <li>
+                Miembro y coordinador del grupo de inductores de la Facultad de
+                Ingeniería
+              </li>
+              <li>Monitor administrativo en ExpoJaveriana</li>
+              <li>Acompañante de Servicio en el centro pastoral</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>📜 Certificaciones Relevantes</h3>
+            <ul>
+              <li>Seguridad Informática para Equipos Técnicos</li>
+              <li>OWASP Top 10 Security Risks</li>
+              <li>Google IT Support Professional</li>
+              <li>Especialización en Python (University of Michigan)</li>
+              <li>
+                Introduction to Git and GitHub a cargo de Google en Coursera
+              </li>
+              <li>Curso Avanzado de Redes de Internet</li>
+              <li>Google IT Support a cargo de Google en Coursera</li>
+              <li>Curso de Fundamentos de Bases de Datos a cargo de Platzi</li>
+              <li>Curso de Java SE Orientado a Objetos a cargo de Platzi</li>
+              <li>
+                Programa especializado: Python for Everybody a cargo de
+                University of Michigan en Coursera
+              </li>
+            </ul>
+            <a
+              href="https://drive.google.com/drive/folders/1k1c8jK7Axvet7V5YBHrQ0gdFBG8nv_OP"
+              class="btn"
+              target="_blank"
+            >
+              Ver Certificados
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="projects">
+        <h2>Proyectos Destacados</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="mqtt.png" alt="IoT Project" />
+            <div class="project-info">
+              <h3>Solución IoT con MQTT</h3>
+              <p>
+                Sistema distribuido para monitoreo de sensores usando protocolo
+                MQTT y Python.
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/Solucion_IoT_MQTT"
+                class="btn"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="sockets.jpeg" alt="Sockets Project" />
+            <div class="project-info">
+              <h3>Comunicación con Sockets</h3>
+              <p>
+                Implementación de sistema cliente-servidor usando C++ y TCP/IP.
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/Comunicacion-Sockets-Distribuidos"
+                class="btn"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Voluntariados -->
+      <section id="volunteer">
+        <h2>Participación y Voluntariados</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>🤝 Misión País Colombia</h3>
+            <p>Voluntario en diciembre 2024</p>
+            <ul>
+              <li>Apoyo comunitario en zonas rurales</li>
+              <li>Coordinación de actividades educativas</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>👥 Inductor Universitario</h3>
+            <p>Facultad de Ingeniería (2023-Actualidad)</p>
+            <ul>
+              <li>Orientación de nuevos estudiantes</li>
+              <li>Organización de actividades de integración</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>👥 Coordinador Del Grupo de Inducción</h3>
+            <p>Facultad de Ingeniería (2025-Actualidad)</p>
+            <ul>
+              <li>
+                Organización de la semana de acogida para los nuevos inductores
+              </li>
+              <li>
+                Guía y apoyo para los inductores de ingeniería de sistemas
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>⌨️ Miembro de IEEE</h3>
+            <p>IEEE (2025-Actualidad)</p>
+            <ul>
+              <li>
+                Colaboración en proyectos que promueven el desarrollo
+                tecnológico y el aprendizaje colaborativo
+              </li>
+              <li>
+                Participación activa en eventos, talleres y actividades que
+                fomentan la innovación
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🫂 Acompañante de Servicio</h3>
+            <p>Javeriana (2025-Actualidad)</p>
+            <ul>
+              <li>
+                Colaboración junto al centro pastoral de la Universidad
+                Javeriana en la organización de Misión Javeriana
+              </li>
+              <li>
+                Apoyo y guía para estudiantes con el fin de servir a comunidades
+                vulnerables
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+       <!-- Nueva Sección Personal -->
+        <section class="personal-section">
+            <h2>Mi Vida Más Allá del Código</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <i class="fas fa-book fa-2x"></i>
+                    <h3>Filosofía</h3>
+                    <p>Apasionado por la filosofía existencialista</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <i class="fas fa-music fa-2x"></i>
+                    <h3>Música</h3>
+                    <p>Amante del rap y de la musica en general</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <i class="fas fa-dumbbell fa-2x"></i>
+                    <h3>Fitness</h3>
+                    <p>Entrenamiento constante y nutrición consciente</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <i class="fas fa-gamepad fa-2x"></i>
+                    <h3>Gaming</h3>
+                    <p>Fanático de los Souls-like y juegos con narrativa profunda</p>
+                </div>
+            </div>
+
+            <div class="spotify-container">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3DK6m7It6Pw857FcQftMds?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+
+    <!-- Contacto Mejorado -->
+        <section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <!-- Tarjeta de Teléfono -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Teléfono</h3>
+                    <a href="tel:+573118468556" class="contact-link">
+                        +57 311 846 8556
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Email -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Correo Electrónico</h3>
+                    <a href="mailto:joshuaprieto8@gmail.com" class="contact-link">
+                        joshuaprieto8@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de WhatsApp -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/573118468556" class="contact-link">
+                        Enviar mensaje
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+                <form class="contact-form" action="https://formspree.io/f/xrgjlqpk" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+     <script>
+        // Sistema de idiomas mejorado
+        const translations = {
+            es: {
+                // ... (traducciones completas en español) ...
+            },
+            en: {
+                // ... (traducciones completas en inglés) ...
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        document.getElementById('btn-es').addEventListener('click', () => setLanguage('es'));
+        document.getElementById('btn-en').addEventListener('click', () => setLanguage('en'));
+
+        // Animaciones
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .timeline-item, .project-card, .hobby-card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
