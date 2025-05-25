@@ -404,34 +404,46 @@
     }
 
     /* Proyectos */
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
+.project-grid {
+    display: flex; /* Cambiado de grid a flex */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    gap: 2rem;
+    justify-content: center; /* Centra los elementos en la línea si no está llena */
+}
 
-    .project-card {
-        background: rgba(31, 41, 55, 0.7);
-        border-radius: 12px;
-        overflow: hidden;
-        transition: all 0.3s;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+.project-card {
+    background: rgba(31, 41, 55, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Ajustes para Flexbox - simula el comportamiento de minmax(300px, 1fr) */
+    flex-basis: 300px; /* Ancho base mínimo */
+    flex-grow: 1;      /* Permite que la tarjeta crezca para ocupar espacio */
+    /* Opcionalmente, puedes añadir un max-width si no quieres que una sola tarjeta se estire demasiado: */
+    /* max-width: 450px; */
+}
 
-    .project-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
-    }
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+}
 
-    .project-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: contain;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 8px;
-    }
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-sizing: border-box; /* Incluido en la respuesta anterior, buena práctica */
+}
 
+.project-info {
+    padding: 1rem;
+    text-align: center;
+}
     /* Animaciones */
     @keyframes animateBg {
         0% { transform: translate(0, 0); }
@@ -508,7 +520,7 @@
                     <i class="fas fa-download"></i> CV Profesional
                 </a>
                 <a href="Profile.pdf" class="btn" download>
-                    <i class="fas fa-download"></i> CV linkedin
+                    <i class="fas fa-download"></i> CV Linkedin
                 </a>
             </div>
         </div>
@@ -536,9 +548,12 @@
                         <ul>
                 <li>Java | C++ | Python | JavaScript/TypeScript</li>
                 <li>HTML/CSS | React | Node.js</li>
-                <li>AWS (Lambda, Microservicios)</li>
+                <li>Git | GitHub | Docker | Linux </li>
+                <li>AWS (Lambda, Microservicios,S3, API Gateways)</li>
+                <li>Firebase (Firestore,FCM,Cloud Functions) </li>
+                <li>MySQL | MongoDB | H2</li>
                 <li>Apache Kafka | Confluent | Pinecone</li>
-                <li>MySQL | MongoDB</li>
+                <li>MQTT | TCP/IP | Sockets</li>
               </ul>
                     </div>
                     
@@ -549,6 +564,10 @@
                             <li>Resolución creativa de problemas</li>
                             <li>Comunicación efectiva</li>
                             <li>Gestión de equipos multidisciplinarios</li>
+                            <li>Adaptabilidad y aprendizaje continuo</li>
+                            <li>Trabajo en equipo</li>
+                            <li>Gestión del tiempo</li>
+                            <li>Empatía y escucha activa</li>
                         </ul>
                     </div>
                 </div>
@@ -559,6 +578,19 @@
       <section id="experience">
         <h2>Experiencia Profesional</h2>
         <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Desarrollador FullStack - Bucks</h3>
+                <p class="text-secondary">Oct 2024 - Actualidad</p>
+                <ul>
+                    <li>Implementación de microservicios en AWS</li>
+                    <li>Gestión de bases de datos relacionales</li>
+                    <li>Optimización de APIs REST</li>
+                    <li>Desarrollo de aplicaciones web con React y Node.js</li>
+                    <li>Actual lider del equipo de Onboardings</li>
+                </ul>
+                </div>
+
           <div class="timeline-item">
             <h3>WebMaster IEEE Javeriana</h3>
             <p class="text-secondary">Ene 2025 - Actualidad</p>
@@ -569,15 +601,7 @@
             </ul>
           </div>
 
-          <div class="timeline-item">
-            <h3>Desarrollador Backend - Bucks</h3>
-            <p class="text-secondary">Oct 2024 - Actualidad</p>
-            <ul>
-              <li>Implementación de microservicios en AWS</li>
-              <li>Gestión de bases de datos relacionales</li>
-              <li>Optimización de APIs REST</li>
-            </ul>
-          </div>
+
 
           <div class="timeline-item">
             <h3>Monitor Académico de Comunicaciones y Redes - Javeriana</h3>
@@ -611,16 +635,16 @@
             <ul>
               <li>Promedio: 4.1/5.0</li>
               <li>Monitor académico en programación y redes</li>
+              <li>Monitor administrativo en ExpoJaveriana</li>
               <li>WebMaster del grupo IEEE Javeriana</li>
-              <li>Participación en Misión País Colombia</li>
-              <li>Curso de liderazgo Fabro</li>
-              <li>Curso de Acompañamiento Red234</Li>
-              <li>
+            <li>
                 Miembro y coordinador del grupo de inductores de la Facultad de
                 Ingeniería
-              </li>
-              <li>Monitor administrativo en ExpoJaveriana</li>
-              <li>Acompañante de Servicio en el centro pastoral</li>
+            </li>
+              <li>Participación en Misión País Colombia</li>
+            <li>Acompañante de Servicio en el centro pastoral</li>
+              <li>Curso de liderazgo Fabro</li>
+              <li>Curso de Acompañamiento Red234</Li>
             </ul>
           </div>
 
@@ -644,56 +668,75 @@
               </li>
             </ul>
             <a
-              href="https://drive.google.com/drive/folders/1k1c8jK7Axvet7V5YBHrQ0gdFBG8nv_OP"
+              href="https://drive.google.com/drive/folders/1k1c8jK7Axvet7V5YBHrQ0gdFBG8nv_OP?usp=sharing"
               class="btn"
               target="_blank"
             >
-              Ver Certificados
+              Ver Todos Mis Certificados
             </a>
           </div>
         </div>
       </section>
 
       <!-- Proyectos -->
-      <section id="projects">
+    <section id="projects">
         <h2>Proyectos Destacados</h2>
         <div class="project-grid">
-          <div class="project-card">
-            <img src="mqtt.png" alt="IoT Project" />
-            <div class="project-info">
-              <h3>Solución IoT con MQTT</h3>
-              <p>
-                Sistema distribuido para monitoreo de sensores usando protocolo
-                MQTT,Java y Python.
-              </p>
-              <a
-                href="https://github.com/JoshuaPZz/Solucion_IoT_MQTT"
-                class="btn"
-                target="_blank"
-              >
-                <i class="fab fa-github"></i> Ver Código
-              </a>
+            <div class="project-card">
+                <img src="mqtt.png" alt="IoT Project" />
+                <div class="project-info">
+                    <h3>Solución IoT con MQTT</h3>
+                    <p>
+                        Sistema distribuido para monitoreo de sensores usando protocolo
+                        MQTT,Java y Python.
+                    </p>
+                    <a href="https://github.com/JoshuaPZz/Solucion_IoT_MQTT" class="btn" target="_blank">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
             </div>
-          </div>
-
-          <div class="project-card">
-            <img src="sockets.jpeg" alt="Sockets Project" />
-            <div class="project-info">
-              <h3>Comunicación con Sockets</h3>
-              <p>
-                Implementación de sistema cliente-servidor usando Java y TCP/IP.
-              </p>
-              <a
-                href="https://github.com/JoshuaPZz/Comunicacion-Sockets-Distribuidos"
-                class="btn"
-                target="_blank"
-              >
-                <i class="fab fa-github"></i> Ver Código
-              </a>
+    
+            <div class="project-card">
+                <img src="sockets.jpeg" alt="Sockets Project" />
+                <div class="project-info">
+                    <h3>Comunicación con Sockets</h3>
+                    <p>
+                        Implementación de sistema cliente-servidor usando Java y TCP/IP.
+                    </p>
+                    <a href="https://github.com/JoshuaPZz/Comunicacion-Sockets-Distribuidos" class="btn" target="_blank">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
             </div>
-          </div>
+    
+            <div class="project-card">
+                <img src="firebaseChart.png" alt="Firebase Cloud Function Chart Generator" />
+                <div class="project-info">
+                    <h3>Microservicios en Firebase analiticos</h3>
+                    <p>
+                        Implementación de microservicios usando Firebase para generar graficas segun metricas dadas.
+                    </p>
+                    <a href="https://github.com/JoshuaPZz/firebase-python-chart-generator" class="btn" target="_blank"><i
+                            class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
+            </div>
+    
+            <div class="project-card">
+                <img src="firebaseFCM.png" alt="Firebase Cloud Function - Firebase Cloud Messaging" />
+                <div class="project-info">
+                    <h3>Microservicios en Firebase FCM</h3>
+                    <p>
+                        Implementación de microservicios usando Firebase para generar notificaciones a usuarios cuando son
+                        invitados a actividades.
+                    </p>
+                    <a href="https://github.com/JoshuaPZz/firebase-python-chart-generator" class="btn" target="_blank"><i
+                            class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
+            </div>
         </div>
-      </section>
+        </section>
 
       <!-- Voluntariados -->
       <section id="volunteer">
@@ -759,6 +802,20 @@
               </li>
             </ul>
           </div>
+          
+        <div class="card">
+            <h3>🫂 Cursante de Red234 </h3>
+            <p>Javeriana (2025-Actualidad)</p>
+            <ul>
+                <li>
+                    Curse de Red234, un programa de acompañamiento y formación para jovenes que acompañan jovenes
+                </li>
+                <li>
+                    Aprendí sobre liderazgo, comunicación efectiva y resolución de conflictos
+                </li>
+            </ul>
+        </div>
+
         </div>
       </section>
 
