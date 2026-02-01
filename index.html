@@ -1,43 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de Joshua Prieto Zambrano - Ingeniero de Sistemas y Desarrollador Full Stack">
-    <title>Joshua Prieto | Ingeniero de Sistemas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Estilos Base */
-    * {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio profesional de Joshua Prieto Zambrano - Desarrollador Backend especializado en Microservicios, AWS y Ciberseguridad"
+    />
+    <title>Joshua Prieto | Desarrollador Backend</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Estilos Base */
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Inter', system-ui, sans-serif;
-    }
+        font-family: "Inter", system-ui, sans-serif;
+      }
 
-    :root {
-        --primary: #4F46E5;
-        --secondary: #818CF8;
-        --dark: #1F2937;
+      :root {
+        --primary: #4f46e5;
+        --secondary: #818cf8;
+        --dark: #1f2937;
         --darker: #111827;
-        --light: #F3F4F6;
-        --accent: #10B981;
-    }
+        --light: #f3f4f6;
+        --accent: #10b981;
+      }
 
-    body {
+      body {
         background: var(--darker);
         color: var(--light);
         line-height: 1.6;
-    }
+      }
 
-    .container {
+      .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 1.5rem;
-    }
+      }
 
-    /* Hero Section */
-    .hero {
+      /* Hero Section */
+      .hero {
         text-align: center;
         padding: 4rem 0;
         background: linear-gradient(135deg, var(--primary), var(--dark));
@@ -46,10 +52,10 @@
         margin-bottom: -3rem;
         position: relative;
         overflow: hidden;
-    }
+      }
 
-    .hero::after {
-        content: '';
+      .hero::after {
+        content: "";
         position: absolute;
         bottom: -50px;
         left: -10%;
@@ -57,9 +63,9 @@
         height: 100px;
         background: var(--darker);
         transform: rotate(3deg);
-    }
+      }
 
-    .hero img {
+      .hero img {
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -67,26 +73,26 @@
         margin-bottom: 1.5rem;
         object-fit: cover;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
+      }
 
-    .social-links {
+      .social-links {
         margin: 1.5rem 0;
-    }
+      }
 
-    .social-links a {
+      .social-links a {
         color: white;
         font-size: 1.5rem;
         margin: 0 0.8rem;
         transition: all 0.3s;
-    }
+      }
 
-    .social-links a:hover {
+      .social-links a:hover {
         transform: translateY(-3px);
         text-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-    }
+      }
 
-    /* Botones mejorados */
-    .btn {
+      /* Botones mejorados */
+      .btn {
         display: inline-flex;
         align-items: center;
         padding: 0.8rem 1.8rem;
@@ -99,33 +105,33 @@
         border: 2px solid rgba(255, 255, 255, 0.1);
         font-weight: 500;
         backdrop-filter: blur(4px);
-    }
+      }
 
-    .btn:hover {
+      .btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
-    }
+      }
 
-    .btn i {
+      .btn i {
         margin-right: 0.5rem;
-    }
+      }
 
-    /* Secciones Generales */
-    section {
+      /* Secciones Generales */
+      section {
         padding: 2.5rem 0;
         margin: 2rem 0;
-    }
+      }
 
-    h2 {
+      h2 {
         font-size: 2.5rem;
         color: var(--light);
         margin-bottom: 2.5rem;
         text-align: center;
         position: relative;
-    }
+      }
 
-    h2::after {
-        content: '';
+      h2::after {
+        content: "";
         width: 60px;
         height: 3px;
         background: var(--accent);
@@ -133,49 +139,73 @@
         bottom: -1rem;
         left: 50%;
         transform: translateX(-50%);
-    }
+      }
 
-    /* Tarjetas */
-    .card-grid {
+      /* Tarjetas */
+      .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
         margin-top: 1.5rem;
-    }
+      }
 
-    .card {
+      .card {
         background: rgba(31, 41, 55, 0.7);
         padding: 1.5rem;
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s;
         backdrop-filter: blur(10px);
-    }
+      }
 
-    .card:hover {
+      .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
+      }
 
-    /* Timeline Experiencia */
-    .timeline {
+      .card h3 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .card ul li {
+        padding: 0.4rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .card ul li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: bold;
+      }
+
+      /* Timeline Experiencia */
+      .timeline {
         position: relative;
         max-width: 800px;
         margin: 0 auto;
         padding-left: 30px;
-    }
+      }
 
-    .timeline::before {
-        content: '';
+      .timeline::before {
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         width: 3px;
         background: var(--primary);
-    }
+      }
 
-    .timeline-item {
+      .timeline-item {
         position: relative;
         margin-bottom: 2rem;
         padding: 1.5rem;
@@ -183,14 +213,14 @@
         border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s;
-    }
+      }
 
-    .timeline-item:hover {
+      .timeline-item:hover {
         transform: translateX(10px);
-    }
+      }
 
-    .timeline-item::before {
-        content: '';
+      .timeline-item::before {
+        content: "";
         position: absolute;
         left: -35px;
         top: 1.5rem;
@@ -199,56 +229,95 @@
         background: var(--accent);
         border-radius: 50%;
         box-shadow: 0 0 12px var(--accent);
-    }
+      }
 
-    /* Sección Personal */
-    .personal-section {
+      .timeline-item h3 {
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-item .text-secondary {
+        color: var(--secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .timeline-item ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .timeline-item ul li {
+        padding: 0.3rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .timeline-item ul li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      /* Sección Personal */
+      .personal-section {
         background: rgba(31, 41, 55, 0.7);
         padding: 2rem;
         border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         margin: 2rem 0;
-    }
+      }
 
-    .hobbies-grid {
+      .hobbies-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 2rem;
         margin-top: 1.5rem;
-    }
+      }
 
-    .hobby-card {
+      .hobby-card {
         text-align: center;
         padding: 1.5rem;
         background: rgba(16, 24, 39, 0.8);
         border-radius: 10px;
         transition: all 0.3s;
-    }
+      }
 
-    .hobby-card:hover {
+      .hobby-card:hover {
         transform: translateY(-8px) rotate(2deg);
         box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
-    }
+      }
 
-    /* Spotify Player */
-    .spotify-container {
+      .hobby-card i {
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .hobby-card h3 {
+        color: var(--light);
+        margin-bottom: 0.5rem;
+      }
+
+      /* Spotify Player */
+      .spotify-container {
         margin: 2rem auto;
         max-width: 600px;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
+      }
 
-    /* Contacto Mejorado */
-    .contact-container {
+      /* Contacto Mejorado */
+      .contact-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
         max-width: 1000px;
         margin: 0 auto;
-    }
+      }
 
-    .contact-info {
+      .contact-info {
         display: grid;
         gap: 1.5rem;
         padding: 2rem;
@@ -257,30 +326,30 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         position: relative;
         overflow: hidden;
-    }
+      }
 
-    .contact-info::before {
-        content: '';
+      .contact-info::before {
+        content: "";
         position: absolute;
         top: -50%;
         left: -50%;
         width: 200%;
         height: 200%;
         background: linear-gradient(
-            45deg,
-            transparent 25%,
-            rgba(79, 70, 229, 0.1) 25%,
-            rgba(79, 70, 229, 0.1) 50%,
-            transparent 50%,
-            transparent 75%,
-            rgba(79, 70, 229, 0.1) 75%
+          45deg,
+          transparent 25%,
+          rgba(79, 70, 229, 0.1) 25%,
+          rgba(79, 70, 229, 0.1) 50%,
+          transparent 50%,
+          transparent 75%,
+          rgba(79, 70, 229, 0.1) 75%
         );
         background-size: 4px 4px;
         animation: animateBg 4s linear infinite;
         z-index: -1;
-    }
+      }
 
-    .contact-card {
+      .contact-card {
         display: flex;
         align-items: center;
         gap: 1.5rem;
@@ -289,15 +358,15 @@
         border-radius: 12px;
         transition: all 0.3s ease;
         border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+      }
 
-    .contact-card:hover {
+      .contact-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
         background: rgba(16, 24, 39, 0.95);
-    }
+      }
 
-    .contact-icon {
+      .contact-icon {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -307,49 +376,50 @@
         justify-content: center;
         font-size: 1.5rem;
         flex-shrink: 0;
-    }
+      }
 
-    .contact-details h3 {
+      .contact-details h3 {
         color: var(--accent);
         margin-bottom: 0.5rem;
         font-size: 1.1rem;
-    }
+      }
 
-    .contact-link {
+      .contact-link {
         color: var(--light);
         text-decoration: none;
         display: flex;
         align-items: center;
         gap: 0.5rem;
         transition: color 0.3s;
-    }
+      }
 
-    .contact-link:hover {
+      .contact-link:hover {
         color: var(--secondary);
-    }
+      }
 
-    .contact-link i {
+      .contact-link i {
         font-size: 0.8rem;
         opacity: 0.7;
-    }
+      }
 
-    .contact-form {
+      .contact-form {
         background: rgba(31, 41, 55, 0.7);
         padding: 2rem;
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: transform 0.3s;
-    }
+      }
 
-    .contact-form:hover {
+      .contact-form:hover {
         transform: translateY(-5px);
-    }
+      }
 
-    .form-group {
+      .form-group {
         margin-bottom: 1.5rem;
-    }
+      }
 
-    input, textarea {
+      input,
+      textarea {
         width: 100%;
         padding: 0.8rem;
         background: rgba(255, 255, 255, 0.05);
@@ -357,38 +427,43 @@
         border-radius: 6px;
         color: var(--light);
         transition: all 0.3s;
-    }
+      }
 
-    input:focus, textarea:focus {
+      input:focus,
+      textarea:focus {
         outline: none;
         border-color: var(--accent);
         box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
-    }
+      }
 
-    button[type="submit"] {
+      button[type="submit"] {
         width: 100%;
         background: linear-gradient(135deg, var(--accent), #059669);
         padding: 1rem;
         font-weight: 600;
         letter-spacing: 0.5px;
         transition: transform 0.3s;
-    }
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+      }
 
-    button[type="submit"]:hover {
+      button[type="submit"]:hover {
         transform: scale(1.02);
-    }
+      }
 
-    /* Selector de Idioma */
-    .language-switcher {
+      /* Selector de Idioma */
+      .language-switcher {
         position: fixed;
         top: 20px;
         right: 20px;
         z-index: 1000;
         display: flex;
         gap: 0.5rem;
-    }
+      }
 
-    .lang-btn {
+      .lang-btn {
         background: rgba(31, 41, 55, 0.7);
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: var(--light);
@@ -396,230 +471,419 @@
         border-radius: 20px;
         cursor: pointer;
         transition: all 0.3s;
-    }
+      }
 
-    .lang-btn:hover {
+      .lang-btn:hover {
         background: var(--accent);
         transform: translateY(-2px);
-    }
+      }
 
-    /* Proyectos */
-.project-grid {
-    display: flex; /* Cambiado de grid a flex */
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
-    gap: 2rem;
-    justify-content: center; /* Centra los elementos en la línea si no está llena */
-}
+      /* Proyectos */
+      .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+      }
 
-.project-card {
-    background: rgba(31, 41, 55, 0.7);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    
-    /* Ajustes para Flexbox - simula el comportamiento de minmax(300px, 1fr) */
-    flex-basis: 300px; /* Ancho base mínimo */
-    flex-grow: 1;      /* Permite que la tarjeta crezca para ocupar espacio */
-    /* Opcionalmente, puedes añadir un max-width si no quieres que una sola tarjeta se estire demasiado: */
-    /* max-width: 450px; */
-}
+      .project-card {
+        background: rgba(31, 41, 55, 0.7);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        flex-basis: 300px;
+        flex-grow: 1;
+        max-width: 450px;
+      }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
-}
+      .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+      }
 
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    box-sizing: border-box; /* Incluido en la respuesta anterior, buena práctica */
-}
+      .project-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
 
-.project-info {
-    padding: 1rem;
-    text-align: center;
-}
-    /* Animaciones */
-    @keyframes animateBg {
-        0% { transform: translate(0, 0); }
-        100% { transform: translate(2px, 2px); }
-    }
+      .project-info {
+        padding: 1.5rem;
+        text-align: center;
+      }
 
-    /* Responsive */
-    @media (max-width: 768px) {
+      .project-info h3 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .project-tech {
+        font-size: 0.85rem;
+        color: var(--secondary);
+        margin: 1rem 0;
+        font-style: italic;
+      }
+
+      .project-note {
+        display: block;
+        margin-top: 0.5rem;
+        color: #666;
+        font-size: 0.8rem;
+      }
+
+      /* Badge para skills */
+      .skill-badge {
+        display: inline-block;
+        background: rgba(79, 70, 229, 0.2);
+        color: var(--secondary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        margin: 0.3rem;
+        border: 1px solid var(--primary);
+      }
+
+      /* Animaciones */
+      @keyframes animateBg {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(2px, 2px);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
         .container {
-            padding: 1rem;
+          padding: 1rem;
         }
-        
-        .contact-container {
-            grid-template-columns: 1fr;
-        }
-        
-        h2 {
-            font-size: 2rem;
-        }
-        
-        .hero {
-            padding: 3rem 0;
-        }
-        
-        .project-card img {
-            height: 180px;
-        }
-        
-        .contact-card {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            font-size: 1.2rem;
-        }
-    }
-</style>
 
-</head>
-<body>
+        .contact-container {
+          grid-template-columns: 1fr;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .hero {
+          padding: 3rem 0;
+        }
+
+        .project-card img {
+          height: 180px;
+        }
+
+        .contact-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .contact-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+
+        .hobbies-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
     <!-- Selector de Idioma -->
     <div class="language-switcher">
-        <button class="lang-btn" id="btn-es">ES</button>
-        <button class="lang-btn" id="btn-en">EN</button>
+      <button class="lang-btn" id="btn-es">ES</button>
+      <button class="lang-btn" id="btn-en">EN</button>
     </div>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container">
-            <img src="profile.jpg" alt="Joshua Prieto">
-            <h1>Joshua Prieto Zambrano</h1>
-            <p>Ingeniero de Sistemas | Especialista en Cloud & Cybersecurity</p>
-            
-            <div class="social-links">
-                <a href="https://linkedin.com/in/joshua-prieto-zambrano-1b68592aa" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/JoshuaPZz" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/jpz.pdf/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:joshuaprieto8@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            
-            <div class="downloads">
-                 <a href="CV_PROFESIONAL_JOSHUA_PRIETO_2025-30.pdf" class="btn" download>
-                    <i class="fas fa-download"></i> CV PROFESIONAL
-                </a>
-                <a href="CV_Joshua_prieto_zambrano_2025-30.pdf" class="btn" download>
-                    <i class="fas fa-download"></i> CV Basico
-                </a>
-            </div>
+      <div class="container">
+        <img src="profile.jpg" alt="Joshua Prieto" />
+        <h1>Joshua Prieto Zambrano</h1>
+        <p>
+          Desarrollador Backend | Especialista en Microservicios, AWS &
+          Ciberseguridad
+        </p>
+
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/joshua-prieto-zambrano-1b68592aa"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/JoshuaPZz"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/jpz.pdf/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:joshuaprieto8@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
+
+        <div class="downloads">
+          <a
+            href="CV_PROFESIONAL_JOSHUA_PRIETO_2025-30.pdf"
+            class="btn"
+            download
+          >
+            <i class="fas fa-download"></i> CV PROFESIONAL
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="container">
-        <!-- Sobre Mí Ampliado -->
-        <section id="about">
-            <h2>Sobre Mí</h2>
-            <div class="card">
-                <p>¡Hola! Soy Joshua, un apasionado ingeniero de sistemas con sede en Bogotá, Colombia. Actualmente curso mis estudios en la Pontificia Universidad Javeriana, donde combino mi amor por la tecnología con el desarrollo de habilidades de liderazgo a través de diversos roles académicos y voluntariados.</p>
-                
-                <p>Cuando no estoy programando o resolviendo problemas técnicos, me encontrarás:
-                    <ul>
-                        <li>📚 Leyendo filosofía (¡Soy gran fan de Sartre)</li>
-                        <li>🎧 Escuchando música (Rap)</li>
-                        <li>🏋️‍♂️ Entrenando en el gimnasio</li>
-                        <li>🎮 Jugando videojuegos (Especialmente Souls-like)</li>
-                    </ul>
-                </p>
+      <!-- Sobre Mí Ampliado -->
+      <section id="about">
+        <h2>Sobre Mí</h2>
+        <div class="card">
+          <p>
+            Desarrollador backend con dominio en <strong>TypeScript</strong>,
+            <strong>Node.js</strong>, <strong>Express</strong> y arquitecturas
+            basadas en <strong>microservicios</strong>. Experiencia en el
+            desarrollo de APIs RESTful, integración con bases de datos SQL/NoSQL
+            y despliegues en la nube con <strong>AWS</strong> y
+            <strong>Docker</strong>.
+          </p>
 
-                <div class="card-grid" style="margin-top: 2rem;">
-                    <div class="card">
-                        <h3>🛠 Tecnologías Principales</h3>
-                        <ul>
-                <li>Java | C++ | Python | JavaScript/TypeScript</li>
-                <li>HTML/CSS | React | Node.js</li>
-                <li>Git | GitHub | Docker | Linux </li>
-                <li>AWS (Lambda, Microservicios,S3, API Gateways)</li>
-                <li>Firebase (Firestore,FCM,Cloud Functions) </li>
-                <li>MySQL | MongoDB | H2</li>
-                <li>Apache Kafka | Confluent | Pinecone</li>
-                <li>MQTT | TCP/IP | Sockets</li>
-              </ul>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>🌟 Habilidades Blandas</h3>
-                        <ul>
-                            <li>Liderazgo estratégico</li>
-                            <li>Resolución creativa de problemas</li>
-                            <li>Comunicación efectiva</li>
-                            <li>Gestión de equipos multidisciplinarios</li>
-                            <li>Adaptabilidad y aprendizaje continuo</li>
-                            <li>Trabajo en equipo</li>
-                            <li>Gestión del tiempo</li>
-                            <li>Empatía y escucha activa</li>
-                        </ul>
-                    </div>
-                </div>
+          <p>
+            Actualmente me especializo en <strong>ciberseguridad</strong> y
+            <strong>microservicios</strong>, con conocimientos avanzados en
+            servicios AWS como <strong>App Runner</strong>,
+            <strong>Lambda</strong>, <strong>API Gateway</strong>,
+            <strong>Step Functions</strong> y <strong>EventBridge</strong>, así
+            como en <strong>Python</strong> para microservicios, servicios
+            simples y scripts.
+          </p>
+
+          <p>
+            Escribo código limpio, seguro y escalable, con enfoque en
+            rendimiento, arquitectura y buenas prácticas. Manejo de frameworks
+            frontend modernos y prácticas DevOps con GitHub Actions.
+          </p>
+
+          <p style="margin-top: 1.5rem">
+            <strong>Más allá del código:</strong> Apasionado por la filosofía
+            existencialista, amante del rap y la música en general, entusiasta
+            del fitness y fanático de los videojuegos Souls-like con narrativas
+            profundas.
+          </p>
+
+          <div class="card-grid" style="margin-top: 2rem">
+            <div class="card">
+              <h3>🛠 Stack Tecnológico</h3>
+              <p><strong>Backend & Microservicios:</strong></p>
+              <div>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Express</span>
+                <span class="skill-badge">Spring Boot</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Java</span>
+              </div>
+
+              <p style="margin-top: 1rem"><strong>Cloud & DevOps:</strong></p>
+              <div>
+                <span class="skill-badge">AWS Lambda</span>
+                <span class="skill-badge">App Runner</span>
+                <span class="skill-badge">API Gateway</span>
+                <span class="skill-badge">Step Functions</span>
+                <span class="skill-badge">EventBridge</span>
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">GitHub Actions</span>
+              </div>
+
+              <p style="margin-top: 1rem"><strong>Bases de Datos:</strong></p>
+              <div>
+                <span class="skill-badge">MongoDB</span>
+                <span class="skill-badge">MySQL</span>
+                <span class="skill-badge">PostgreSQL</span>
+                <span class="skill-badge">Pinecone</span>
+              </div>
+
+              <p style="margin-top: 1rem"><strong>Frontend:</strong></p>
+              <div>
+                <span class="skill-badge">Angular</span>
+                <span class="skill-badge">React</span>
+                <span class="skill-badge">HTML/CSS</span>
+              </div>
+
+              <p style="margin-top: 1rem">
+                <strong>APIs & Protocolos:</strong>
+              </p>
+              <div>
+                <span class="skill-badge">REST</span>
+                <span class="skill-badge">GraphQL</span>
+                <span class="skill-badge">MQTT</span>
+                <span class="skill-badge">TCP/IP</span>
+              </div>
             </div>
-        </section>
+
+            <div class="card">
+              <h3>🎯 Arquitectura & Diseño</h3>
+              <ul>
+                <li>
+                  Patrones de diseño (Singleton, Factory, Strategy, Observer,
+                  Adapter, Repository, Dependency Injection)
+                </li>
+                <li>Principios SOLID</li>
+                <li>Arquitectura de microservicios</li>
+                <li>Arquitectura orientada a eventos</li>
+                <li>Diseño de APIs RESTful y GraphQL</li>
+                <li>Code review y control de versiones</li>
+              </ul>
+
+              <h3 style="margin-top: 1.5rem">🔒 Ciberseguridad</h3>
+              <ul>
+                <li>OWASP Top 10</li>
+                <li>Seguridad en APIs</li>
+                <li>Autenticación y autorización (OAuth)</li>
+                <li>Fundamentos de redes y protocolos</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>🌟 Habilidades Blandas</h3>
+              <ul>
+                <li>Liderazgo de equipos técnicos</li>
+                <li>Resolución creativa de problemas</li>
+                <li>Comunicación efectiva</li>
+                <li>Gestión de equipos multidisciplinarios</li>
+                <li>Adaptabilidad y aprendizaje continuo</li>
+                <li>Trabajo colaborativo</li>
+                <li>Gestión del tiempo y prioridades</li>
+                <li>Empatía y escucha activa</li>
+                <li>Mentoría técnica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Experiencia Laboral -->
       <section id="experience">
         <h2>Experiencia Profesional</h2>
         <div class="timeline">
-
-            <div class="timeline-item">
-                <h3>Desarrollador FullStack - Bucks</h3>
-                <p class="text-secondary">Oct 2024 - Actualidad</p>
-                <ul>
-                    <li>Implementación de microservicios en AWS</li>
-                    <li>Gestión de bases de datos relacionales</li>
-                    <li>Optimización de APIs REST</li>
-                    <li>Desarrollo de aplicaciones web con React y Node.js</li>
-                    <li>Actual lider del equipo de Onboardings</li>
-                </ul>
-                </div>
-
           <div class="timeline-item">
-            <h3>WebMaster IEEE Javeriana</h3>
-            <p class="text-secondary">Ene 2025 - Actualidad</p>
+            <h3>Desarrollador de Software - Bucks</h3>
+            <p class="text-secondary">
+              Octubre 2024 - Octubre 2025 | Bogotá, Colombia
+            </p>
             <ul>
-              <li>Gestión integral del sitio web institucional</li>
-              <li>Implementación de mejoras en UX/UI</li>
-              <li>Integración de herramientas digitales</li>
+              <li>
+                Implementé microservicios backend utilizando TypeScript y
+                Node.js, siguiendo principios de arquitectura desacoplada,
+                orientada a eventos y modular para garantizar escalabilidad y
+                mantenibilidad
+              </li>
+              <li>
+                Desarrollé APIs RESTful integradas con bases de datos NoSQL como
+                MongoDB y Pinecone, enfocadas en eficiencia, claridad
+                estructural y optimización de consultas
+              </li>
+              <li>
+                Diseñé contenedores Docker para ambientes de desarrollo y
+                pruebas locales, facilitando la estandarización del entorno y la
+                colaboración entre equipos multidisciplinarios
+              </li>
+              <li>
+                Colaboré en la construcción de funcionalidades frontend
+                utilizando frameworks modernos, asegurando coherencia entre
+                capas y una experiencia fluida para el usuario final
+              </li>
+              <li>
+                Apoyé procesos de onboarding técnico de nuevos clientes,
+                diseñando flujos de integración y configuraciones necesarias
+                para su incorporación eficiente al sistema
+              </li>
+              <li>
+                Participé activamente en decisiones técnicas sobre arquitectura,
+                seguridad básica y organización del código, contribuyendo a
+                mantener la calidad, escalabilidad y robustez del proyecto
+              </li>
+              <li>
+                Desplegué aplicaciones en AWS utilizando servicios como App
+                Runner para contenedores, Lambda para funciones serverless, API
+                Gateway para gestión de endpoints, Step Functions para
+                orquestación de flujos y EventBridge para manejo de eventos
+              </li>
+              <li>
+                Desarrollé microservicios, servicios simples y scripts en Python
+                para automatización, procesamiento de datos y soporte a
+                arquitecturas backend complejas
+              </li>
             </ul>
           </div>
 
-
-
           <div class="timeline-item">
-            <h3>Monitor Académico de Comunicaciones y Redes - Javeriana</h3>
-            <p class="text-secondary">Jul 2024 - Ene 2025</p>
+            <h3>Webmaster IEEE Javeriana</h3>
+            <p class="text-secondary">
+              Enero 2025 - Septiembre 2025 | Bogotá, Colombia
+            </p>
             <ul>
-              <li>Explicación de protocolos de red</li>
-              <li>Apoyo en proyectos de gestión de red y MQTT</li>
+              <li>
+                Encargado del desarrollo, mantenimiento y gestión técnica del
+                sitio web oficial del capítulo estudiantil IEEE en la Pontificia
+                Universidad Javeriana
+              </li>
+              <li>
+                Colaboré estrechamente con el equipo de comunicaciones para
+                alinear el sitio con la identidad visual y objetivos
+                estratégicos del capítulo IEEE
+              </li>
             </ul>
           </div>
 
           <div class="timeline-item">
             <h3>
-              Monitor Académico de Introducción a la Programación - Javeriana
+              Monitor Académico de Comunicaciones y Redes - Pontificia
+              Universidad Javeriana
             </h3>
-            <p class="text-secondary">Jul 2023 - Ene 2025</p>
+            <p class="text-secondary">
+              Julio 2024 - Noviembre 2024 | Bogotá, Colombia
+            </p>
             <ul>
-              <li>Profesor y apoyo en programación en C++</li>
-              <li>Asistencia en asuntos académicos y tutorías</li>
+              <li>
+                Brindé acompañamiento técnico y académico a estudiantes en temas
+                de redes de computadoras, protocolos de comunicación y
+                fundamentos de ciberseguridad
+              </li>
+              <li>
+                Expliqué conceptos complejos como modelos OSI/TCP-IP,
+                direccionamiento IP, NAT, enrutamiento, y análisis de paquetes,
+                facilitando su comprensión mediante ejemplos prácticos
+              </li>
+              <li>
+                Guié a los estudiantes en el uso de herramientas de red (como
+                Wireshark y simuladores) para fortalecer sus habilidades
+                prácticas en entornos reales y de laboratorio
+              </li>
+              <li>
+                Apoyé en la resolución de dudas técnicas, asesorías
+                personalizadas y refuerzos temáticos, contribuyendo al
+                aprendizaje efectivo y al rendimiento académico del grupo
+              </li>
             </ul>
           </div>
         </div>
@@ -631,133 +895,207 @@
         <div class="card-grid">
           <div class="card">
             <h3>🎓 Pontificia Universidad Javeriana</h3>
-            <p>Ingeniería de Sistemas (2023-2026)</p>
-            <ul>
-              <li>Promedio: 4.1/5.0</li>
-              <li>Monitor académico en programación y redes</li>
-              <li>Monitor administrativo en ExpoJaveriana</li>
-              <li>WebMaster del grupo IEEE Javeriana</li>
-            <li>
-                Miembro y coordinador del grupo de inductores de la Facultad de
+            <p><strong>Ingeniería de Sistemas</strong></p>
+            <p>Enero 2023 - Actualidad | Bogotá, Colombia</p>
+            <p style="margin-top: 1rem"><strong>Promedio: 4.1/5.0</strong></p>
+            <ul style="margin-top: 1rem">
+              <li>Monitor académico de Comunicaciones y Redes</li>
+              <li>Webmaster del capítulo estudiantil IEEE Javeriana</li>
+              <li>
+                Miembro y coordinador del grupo de Inductores de la Facultad de
                 Ingeniería
-            </li>
-              <li>Participación en Misión País Colombia</li>
-            <li>Acompañante de Servicio en el centro pastoral</li>
-              <li>Curso de liderazgo Fabro</li>
-              <li>Curso de liderazgo CREO</li>
-              <li>Curso de Acompañamiento Red234</Li>
+              </li>
+              <li>Acompañante de Servicio en el Centro Pastoral</li>
+              <li>
+                Participación activa como misionero en Misión País Colombia
+              </li>
+              <li>Facilitador en Curso de Liderazgo Fabro</li>
+              <li>Cursante de liderazgo CREO</li>
+              <li>Cursante de Acompañamiento Red234</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>📜 Certificaciones Relevantes</h3>
+            <h3>📜 Certificaciones Técnicas</h3>
             <ul>
-              <li>Seguridad Informática para Equipos Técnicos</li>
-              <li>OWASP Top 10 Security Risks</li>
-              <li>Google IT Support Professional</li>
-              <li>Especialización en Python (University of Michigan)</li>
               <li>
-                Introduction to Git and GitHub a cargo de Google en Coursera
+                <strong>Seguridad Informática para Equipos Técnicos</strong>
               </li>
-              <li>Curso Avanzado de Redes de Internet</li>
-              <li>Google IT Support a cargo de Google en Coursera</li>
-              <li>Curso de Fundamentos de Bases de Datos a cargo de Platzi</li>
-              <li>Curso de Java SE Orientado a Objetos a cargo de Platzi</li>
+              <li><strong>OWASP Top 10 Security Risks</strong></li>
               <li>
-                Programa especializado: Python for Everybody a cargo de
-                University of Michigan en Coursera
+                Google IT Support Professional Certificate - Google (Coursera)
               </li>
+              <li>
+                Especialización en Python - University of Michigan (Coursera)
+              </li>
+              <li>Introduction to Git and GitHub - Google (Coursera)</li>
+              <li>Curso Avanzado de Redes de Internet - Platzi</li>
+              <li>Fundamentos de Bases de Datos - Platzi</li>
+              <li>Java SE Orientado a Objetos - Platzi</li>
+              <li>Python for Everybody - University of Michigan (Coursera)</li>
             </ul>
             <a
               href="https://drive.google.com/drive/folders/1k1c8jK7Axvet7V5YBHrQ0gdFBG8nv_OP?usp=sharing"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              Ver Todos Mis Certificados
+              <i class="fas fa-certificate"></i> Ver Todos Mis Certificados
             </a>
           </div>
         </div>
       </section>
 
       <!-- Proyectos -->
-    <section id="projects">
+      <section id="projects">
         <h2>Proyectos Destacados</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <img src="mqtt.png" alt="IoT Project" />
-                <div class="project-info">
-                    <h3>Solución IoT con MQTT</h3>
-                    <p>
-                        Sistema distribuido para monitoreo de sensores usando protocolo
-                        MQTT,Java y Python.
-                    </p>
-                    <a href="https://github.com/JoshuaPZz/Solucion_IoT_MQTT" class="btn" target="_blank">
-                        <i class="fab fa-github"></i> Ver Código
-                    </a>
-                </div>
+          <div class="project-card">
+            <img src="mqtt.png" alt="Solución IoT con MQTT" />
+            <div class="project-info">
+              <h3>Solución IoT con MQTT</h3>
+              <p>
+                Sistema distribuido para monitoreo de sensores utilizando MQTT.
+                Arquitectura basada en brokers y clientes que procesa datos en
+                tiempo real y permite visualización y persistencia.
+              </p>
+              <p class="project-tech">
+                Tecnologías: MQTT · Java · Python · Mosquitto · Procesamiento en
+                tiempo real
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/Solucion_IoT_MQTT"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
             </div>
-    
-            <div class="project-card">
-                <img src="sockets.jpeg" alt="Sockets Project" />
-                <div class="project-info">
-                    <h3>Comunicación con Sockets</h3>
-                    <p>
-                        Implementación de sistema cliente-servidor usando Java y TCP/IP.
-                    </p>
-                    <a href="https://github.com/JoshuaPZz/Comunicacion-Sockets-Distribuidos" class="btn" target="_blank">
-                        <i class="fab fa-github"></i> Ver Código
-                    </a>
-                </div>
-            </div>
-    
-            <div class="project-card">
-                <img src="firebaseChart.png" alt="Firebase Cloud Function Chart Generator" />
-                <div class="project-info">
-                    <h3>Microservicios en Firebase analiticos</h3>
-                    <p>
-                        Implementación de microservicios usando Firebase para generar graficas segun metricas dadas.
-                    </p>
-                    <a href="https://github.com/JoshuaPZz/firebase-python-chart-generator" class="btn" target="_blank"><i
-                            class="fab fa-github"></i> Ver Código
-                    </a>
-                </div>
-            </div>
-    
-            <div class="project-card">
-                <img src="firebaseFCM.png" alt="Firebase Cloud Function - Firebase Cloud Messaging" />
-                <div class="project-info">
-                    <h3>Microservicios en Firebase FCM</h3>
-                    <p>
-                        Implementación de microservicios usando Firebase para generar notificaciones a usuarios cuando son
-                        invitados a actividades.
-                    </p>
-                    <a href="https://github.com/JoshuaPZz/cloud-function-notifications-app" class="btn" target="_blank"><i
-                            class="fab fa-github"></i> Ver Código
-                    </a>
-                </div>
-            </div>
+          </div>
 
-            <div class="project-card">
-                <img src="deletetweets.png" alt="DeleteTweet - Eliminador masivo de Tweets" />
-                <div class="project-info">
-                    <h3>DeleteTweet — Eliminador masivo de Tweets</h3>
-                    <p>
-                        Herramienta que permite eliminar en masa tweets antiguos de forma segura usando la API de Twitter v1.1
-                        y autenticación OAuth 1.0a. Ideal para limpiar historiales descargados aplicando filtros (fecha,
-                        criterios personalizados) y evitando borrados accidentales.
-                    </p>
-                    <p class="project-tech" aria-hidden="true">Tecnologías: Python · Twitter API v1.1 · OAuth 1.0a</p>
-                    <a href="https://github.com/JoshuaPZz/DeleteTweets" class="btn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> Ver Código
-                    </a>
-                    <small class="project-note" style="display:block;margin-top:.5rem;color:#666;">
-                        Uso responsable: requiere credenciales y revisar los Términos de Servicio de Twitter antes de operar.
-                    </small>
-                </div>
+          <div class="project-card">
+            <img
+              src="firebaseChart.png"
+              alt="Microservicios Firebase - Generador de gráficos"
+            />
+            <div class="project-info">
+              <h3>
+                Microservicios en Firebase - Generador de Gráficos Analíticos
+              </h3>
+              <p>
+                Conjunto de microservicios serverless que procesan métricas y
+                generan gráficas a partir de datos de entrada, pensado para
+                dashboards analíticos.
+              </p>
+              <p class="project-tech">
+                Tecnologías: Firebase Cloud Functions · Python · Firestore ·
+                Storage · Librerías de gráficos
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/firebase-python-chart-generator"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
             </div>
+          </div>
 
+          <div class="project-card">
+            <img
+              src="deletetweets.png"
+              alt="DeleteTweet - Eliminador masivo de tweets"
+            />
+            <div class="project-info">
+              <h3>DeleteTweet - Eliminador Masivo de Tweets</h3>
+              <p>
+                Herramienta para eliminar tweets antiguos usando la API de
+                Twitter v1.1 con OAuth 1.0a. Pensada para limpieza masiva basada
+                en filtros (fecha, criterios personalizados).
+              </p>
+              <p class="project-tech">
+                Tecnologías: Python · Twitter API v1.1 · OAuth 1.0a · Manejo
+                seguro de credenciales
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/DeleteTweets"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
+              <small class="project-note">
+                Uso responsable: requiere credenciales y revisar los Términos de
+                Servicio de Twitter antes de operar.
+              </small>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="sockets.jpeg" alt="Comunicación con Sockets" />
+            <div class="project-info">
+              <h3>Comunicación con Sockets</h3>
+              <p>
+                Implementación de sistema cliente-servidor usando Java y TCP/IP
+                para comunicación en tiempo real entre aplicaciones
+                distribuidas.
+              </p>
+              <p class="project-tech">
+                Tecnologías: Java · TCP/IP · Sockets · Programación concurrente
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/Comunicacion-Sockets-Distribuidos"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="firebaseFCM.png"
+              alt="Firebase Cloud Messaging - Notificaciones"
+            />
+            <div class="project-info">
+              <h3>Microservicios en Firebase - FCM</h3>
+              <p>
+                Implementación de microservicios usando Firebase para generar
+                notificaciones push a usuarios cuando son invitados a
+                actividades o eventos.
+              </p>
+              <p class="project-tech">
+                Tecnologías: Firebase Cloud Functions · Firebase Cloud Messaging
+                · Node.js · Firestore
+              </p>
+              <a
+                href="https://github.com/JoshuaPZz/cloud-function-notifications-app"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> Ver Código
+              </a>
+            </div>
+          </div>
         </div>
-        </section>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <a
+            href="https://github.com/JoshuaPZz"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-github"></i> Ver Todos Mis Proyectos en GitHub
+          </a>
+        </div>
+      </section>
 
       <!-- Voluntariados -->
       <section id="volunteer">
@@ -765,235 +1103,299 @@
         <div class="card-grid">
           <div class="card">
             <h3>🤝 Misión País Colombia</h3>
-            <p>Voluntario en diciembre 2024</p>
+            <p><strong>Voluntario Misionero</strong> | Diciembre 2024</p>
             <ul>
               <li>Apoyo comunitario en zonas rurales</li>
-              <li>Coordinación de actividades educativas</li>
+              <li>Coordinación de actividades educativas y formativas</li>
+              <li>Trabajo en equipo con comunidades vulnerables</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>👥 Coordinador del Grupo de Inducción</h3>
+            <p>
+              <strong>Facultad de Ingeniería - PUJ</strong> | 2025-Actualidad
+            </p>
+            <ul>
+              <li>
+                Organización de la semana de acogida para nuevos inductores
+              </li>
+              <li>
+                Guía y apoyo para los inductores de Ingeniería de Sistemas
+              </li>
+              <li>Liderazgo de equipo y coordinación de actividades</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>👥 Inductor Universitario</h3>
-            <p>Facultad de Ingeniería (2023-Actualidad)</p>
+            <p>
+              <strong>Facultad de Ingeniería - PUJ</strong> | 2023-Actualidad
+            </p>
             <ul>
               <li>Orientación de nuevos estudiantes</li>
               <li>Organización de actividades de integración</li>
+              <li>Apoyo en la adaptación a la vida universitaria</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>👥 Coordinador Del Grupo de Inducción</h3>
-            <p>Facultad de Ingeniería (2025-Actualidad)</p>
-            <ul>
-              <li>
-                Organización de la semana de acogida para los nuevos inductores
-              </li>
-              <li>
-                Guía y apoyo para los inductores de ingeniería de sistemas
-              </li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>⌨️ Miembro de IEEE</h3>
-            <p>IEEE (2025-Actualidad)</p>
+            <h3>⌨️ Miembro de IEEE Javeriana</h3>
+            <p>
+              <strong>IEEE - Capítulo Estudiantil</strong> | 2025-Actualidad
+            </p>
             <ul>
               <li>
                 Colaboración en proyectos que promueven el desarrollo
-                tecnológico y el aprendizaje colaborativo
+                tecnológico
               </li>
               <li>
-                Participación activa en eventos, talleres y actividades que
-                fomentan la innovación
+                Participación activa en eventos, talleres y actividades de
+                innovación
               </li>
+              <li>Webmaster del capítulo estudiantil</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>🫂 Acompañante de Servicio</h3>
-            <p>Javeriana (2025-Actualidad)</p>
+            <p><strong>Centro Pastoral PUJ</strong> | 2025-Actualidad</p>
             <ul>
+              <li>Colaboración en la organización de Misión Javeriana</li>
               <li>
-                Colaboración junto al centro pastoral de la Universidad
-                Javeriana en la organización de Misión Javeriana
-              </li>
-              <li>
-                Apoyo y guía para estudiantes con el fin de servir a comunidades
+                Apoyo y guía para estudiantes que sirven a comunidades
                 vulnerables
               </li>
+              <li>Facilitación de experiencias de servicio social</li>
             </ul>
           </div>
-          
-        <div class="card">
-            <h3>🫂 Cursante de Red234 </h3>
-            <p>Javeriana (Enero 2025-Junio 2025)</p>
+
+          <div class="card">
+            <h3>🎓 Facilitador - Curso de Liderazgo Fabro</h3>
+            <p><strong>PUJ</strong> | 2025</p>
             <ul>
-                <li>
-                    Curse de Red234, un programa de acompañamiento y formación para jovenes que acompañan jovenes
-                </li>
-                <li>
-                    Aprendí sobre liderazgo, comunicación efectiva y resolución de conflictos
-                </li>
-                <li>
-                     Reconocimiento otorgado por la Vicerrectoría del Medio Universitario de la Pontificia Universidad Javeriana:
-                </li>
+              <li>Rol de líder formador en el curso de liderazgo</li>
+              <li>Facilitación de dinámicas y formación de cursantes</li>
+              <li>Desarrollo de habilidades blandas y trabajo en equipo</li>
             </ul>
-                <a href="magisred.pdf" class="btn" download>
-        <i class="fas fa-file-download"></i> Descargar Insignia
-    </a>
-        </div>
+          </div>
 
-
-
-
+          <div class="card">
+            <h3>🫂 Cursante de Red234</h3>
+            <p><strong>PUJ</strong> | Enero 2025 - Junio 2025</p>
+            <ul>
+              <li>
+                Programa de acompañamiento y formación para jóvenes que
+                acompañan jóvenes
+              </li>
+              <li>
+                Aprendizaje en liderazgo, comunicación efectiva y resolución de
+                conflictos
+              </li>
+              <li>
+                Reconocimiento otorgado por la Vicerrectoría del Medio
+                Universitario
+              </li>
+            </ul>
+            <a href="magisred.pdf" class="btn" download>
+              <i class="fas fa-file-download"></i> Descargar Insignia
+            </a>
+          </div>
         </div>
       </section>
 
-       <!-- Nueva Sección Personal -->
-        <section class="personal-section">
-            <h2>Mi Vida Más Allá del Código</h2>
-            <div class="hobbies-grid">
-                <div class="hobby-card">
-                    <i class="fas fa-book fa-2x"></i>
-                    <h3>Filosofía</h3>
-                    <p>Apasionado por la filosofía existencialista</p>
-                </div>
-                
-                <div class="hobby-card">
-                    <i class="fas fa-music fa-2x"></i>
-                    <h3>Música</h3>
-                    <p>Amante del rap y de la musica en general</p>
-                </div>
-                
-                <div class="hobby-card">
-                    <i class="fas fa-dumbbell fa-2x"></i>
-                    <h3>Fitness</h3>
-                    <p>Entrenamiento constante y nutrición consciente</p>
-                </div>
-                
-                <div class="hobby-card">
-                    <i class="fas fa-gamepad fa-2x"></i>
-                    <h3>Gaming</h3>
-                    <p>Fanático de los Souls-like y juegos con narrativa profunda</p>
-                </div>
-            </div>
+      <!-- Nueva Sección Personal -->
+      <section class="personal-section">
+        <h2>Mi Vida Más Allá del Código</h2>
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <i class="fas fa-book fa-2x"></i>
+            <h3>Filosofía</h3>
+            <p>Apasionado por la filosofía existencialista</p>
+          </div>
 
-            <div class="spotify-container">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3DK6m7It6Pw857FcQftMds?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </section>
+          <div class="hobby-card">
+            <i class="fas fa-music fa-2x"></i>
+            <h3>Música</h3>
+            <p>Amante del rap y de la música en general</p>
+          </div>
 
-    <!-- Contacto Mejorado -->
-        <section id="contact">
-    <h2>Contacto</h2>
-    <div class="contact-container">
-        <div class="contact-info">
+          <div class="hobby-card">
+            <i class="fas fa-dumbbell fa-2x"></i>
+            <h3>Fitness</h3>
+            <p>Entrenamiento constante y nutrición consciente</p>
+          </div>
+
+          <div class="hobby-card">
+            <i class="fas fa-gamepad fa-2x"></i>
+            <h3>Gaming</h3>
+            <p>Fanático de los Souls-like y juegos con narrativa profunda</p>
+          </div>
+        </div>
+
+        <div class="spotify-container">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/3DK6m7It6Pw857FcQftMds?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              fullscreen;
+              picture-in-picture;
+            "
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Contacto Mejorado -->
+      <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contact-container">
+          <div class="contact-info">
             <!-- Tarjeta de Teléfono -->
             <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="contact-details">
-                    <h3>Teléfono</h3>
-                    <a href="tel:+573118468556" class="contact-link">
-                        +57 311 846 8556
-                    </a>
-                </div>
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Teléfono</h3>
+                <a href="tel:+573118468556" class="contact-link">
+                  +57 311 846 8556
+                </a>
+              </div>
             </div>
 
             <!-- Tarjeta de Email -->
             <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                    <h3>Correo Electrónico</h3>
-                    <a href="mailto:joshuaprieto8@gmail.com" class="contact-link">
-                        joshuaprieto8@gmail.com
-                    </a>
-                </div>
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Correo Electrónico</h3>
+                <a href="mailto:joshuaprieto8@gmail.com" class="contact-link">
+                  joshuaprieto8@gmail.com
+                </a>
+              </div>
             </div>
 
             <!-- Tarjeta de WhatsApp -->
             <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="contact-details">
-                    <h3>WhatsApp</h3>
-                    <a href="https://wa.me/573118468556" class="contact-link">
-                        Enviar mensaje
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-details">
+                <h3>WhatsApp</h3>
+                <a
+                  href="https://wa.me/573118468556"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Enviar mensaje
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
             </div>
-        </div>
+          </div>
 
-                <form class="contact-form" action="https://formspree.io/f/xrgjlqpk" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Mensaje</button>
-                </form>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xrgjlqpk"
+            method="POST"
+          >
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Nombre" required />
             </div>
-        </section>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo electrónico"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Mensaje"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </section>
     </main>
 
-     <script>
-        // Sistema de idiomas mejorado
-        const translations = {
-            es: {
-                // ... (traducciones completas en español) ...
-            },
-            en: {
-                // ... (traducciones completas en inglés) ...
+    <script>
+      // Sistema de idiomas mejorado
+      const translations = {
+        es: {
+          // Traducciones en español (placeholder)
+        },
+        en: {
+          // Traducciones en inglés (placeholder)
+        },
+      };
+
+      function setLanguage(lang) {
+        document.querySelectorAll("[data-translate]").forEach((element) => {
+          const key = element.getAttribute("data-translate");
+          if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+      }
+
+      document
+        .getElementById("btn-es")
+        .addEventListener("click", () => setLanguage("es"));
+      document
+        .getElementById("btn-en")
+        .addEventListener("click", () => setLanguage("en"));
+
+      // Animaciones
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
             }
-        };
+          });
+        },
+        { threshold: 0.1 },
+      );
 
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-        }
-
-        document.getElementById('btn-es').addEventListener('click', () => setLanguage('es'));
-        document.getElementById('btn-en').addEventListener('click', () => setLanguage('en'));
-
-        // Animaciones
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.card, .timeline-item, .project-card, .hobby-card').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(el);
+      document
+        .querySelectorAll(".card, .timeline-item, .project-card, .hobby-card")
+        .forEach((el) => {
+          el.style.opacity = 0;
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+          observer.observe(el);
         });
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
