@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { Navbar } from './Navbar';
 import { PortfolioEN } from './PortfolioEN';
