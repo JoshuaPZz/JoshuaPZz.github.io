@@ -290,6 +290,58 @@ export function PortfolioES() {
           </div>
           <div className="projects-grid">
             <div className="project-card reveal">
+              <img src="kitpagos.jpg" alt="Kit Pagos Colombia — Tesis de Grado" />
+              <div className="project-body">
+                <h3>Kit Pagos Colombia — Tesis de Grado</h3>
+                <p>
+                  SDK unificado y simulador de pasarelas de pago colombianas (Wompi, PayU, Mercado Pago, Kushki) desarrollado bajo Arquitectura Hexagonal (Puertos y Adaptadores) y Domain-Driven Design (DDD) en TypeScript.
+                </p>
+                <div className="project-tech">
+                  <span>TypeScript</span>
+                  <span>Arquitectura Hexagonal</span>
+                  <span>DDD</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                </div>
+                <a
+                  href="https://github.com/PurosBrothers/Kit-Pagos-Colombia---Tesis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <i className="fab fa-github"></i> Ver en GitHub
+                  <i className="fas fa-external-link-alt" style={{ fontSize: "0.7rem" }}></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card reveal">
+              <img src="mapasolidario.jpg" alt="Mapa Solidario — Geoespacial en Tiempo Real" />
+              <div className="project-body">
+                <h3>Mapa Solidario — Geoespacial en Tiempo Real</h3>
+                <p>
+                  Plataforma web colaborativa para el mapeo y coordinación de puntos de ayuda humanitaria y centros de acopio ante emergencias, con sincronización en tiempo real vía WebSockets con Supabase PostgreSQL y mapas interactivos con Leaflet.
+                </p>
+                <div className="project-tech">
+                  <span>Next.js 16</span>
+                  <span>React 19</span>
+                  <span>Supabase Realtime</span>
+                  <span>PostgreSQL</span>
+                  <span>Leaflet</span>
+                </div>
+                <a
+                  href="https://github.com/JoshuaPZz/mapa-solidario"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <i className="fab fa-github"></i> Ver en GitHub
+                  <i className="fas fa-external-link-alt" style={{ fontSize: "0.7rem" }}></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card reveal">
               <img src="microservices.png" alt="Marketplace Microservices Platform" />
               <div className="project-body">
                 <h3>Marketplace Microservices Platform</h3>
