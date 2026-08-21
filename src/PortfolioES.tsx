@@ -367,6 +367,32 @@ export function PortfolioES() {
               </div>
             </div>
             <div className="project-card reveal">
+              <img src="estructuras.jpg" alt="Motor de Modelado 3D y Estructuras de Datos Avanzadas" />
+              <div className="project-body">
+                <h3>Motor de Modelado 3D & Estructuras de Datos</h3>
+                <p>
+                  Sistema en C++ para análisis geométrico 3D y particionamiento espacial. Implementa Árboles KD (k-d tree 3D) para búsqueda de vecino más cercano en O(log n), grafos ponderados de mallas poligonales con algoritmo de Dijkstra y cajas envolventes (AABB).
+                </p>
+                <div className="project-tech">
+                  <span>C++11/17</span>
+                  <span>KD-Tree 3D</span>
+                  <span>Grafos</span>
+                  <span>Dijkstra</span>
+                  <span>CMake</span>
+                </div>
+                <a
+                  href="https://github.com/JoshuaPZz/Proyecto_Estructuras"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <i className="fab fa-github"></i> Ver en GitHub
+                  <i className="fas fa-external-link-alt" style={{ fontSize: "0.7rem" }}></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card reveal">
               <img src="mqtt.png" alt="Solución IoT con MQTT" />
               <div className="project-body">
                 <h3>Solución IoT Distribuida con MQTT</h3>

@@ -367,6 +367,32 @@ export function PortfolioEN() {
               </div>
             </div>
             <div className="project-card reveal">
+              <img src="estructuras.jpg" alt="3D Mesh Modeling & Spatial Data Structures Engine" />
+              <div className="project-body">
+                <h3>3D Geometric Mesh Engine & Data Structures</h3>
+                <p>
+                  Computational geometry and 3D spatial partitioning system in C++. Implements 3D KD-Trees for O(log n) nearest neighbor searches, weighted polygonal graphs with Dijkstra shortest-path algorithms, and axis-aligned bounding boxes (AABB).
+                </p>
+                <div className="project-tech">
+                  <span>C++11/17</span>
+                  <span>KD-Tree 3D</span>
+                  <span>Grafos</span>
+                  <span>Dijkstra</span>
+                  <span>CMake</span>
+                </div>
+                <a
+                  href="https://github.com/JoshuaPZz/Proyecto_Estructuras"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <i className="fab fa-github"></i> View on GitHub
+                  <i className="fas fa-external-link-alt" style={{ fontSize: "0.7rem" }}></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card reveal">
               <img src="mqtt.png" alt="Solución IoT con MQTT" />
               <div className="project-body">
                 <h3>Distributed IoT Solution with MQTT</h3>
